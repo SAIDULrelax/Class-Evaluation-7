@@ -1,0 +1,145 @@
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 70px auto;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffcc00;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  background: #444;
+  color: white;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar li:hover {
+  background: #5e5e5e;
+}
+
+.sidebar .bottom {
+  margin-top: auto;
+}
+
+
+.main {
+  grid-area: main;
+  padding: 30px;
+  background: #490000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;
+  min-height: 100vh;       
+}
+
+
+.main h1 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow:0 2px 5px #ffcc00;
+}
+
+.main p {
+  margin-bottom: 30px;
+  color: #ffffff;
+  line-height: 1.6;
+  text-shadow: 0 2px 5px#ffcc00;
+}
+
+.products {
+  display: flex;
+  justify-content: center;   
+  align-items: center;      
+  gap: 30px;
+  flex-wrap: wrap;
+  min-height: 60vh;         
+}
+
+
+.product {
+  background: rgb(0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(227, 243, 8, 0.952);
+  text-align: center;
+  padding: 15px;
+  width: 150px;
+  transition: transform 0.3s;
+}
+.product p {
+  color: #ffffff;  
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product:hover {
+  transform: scale(1.50);
+}
